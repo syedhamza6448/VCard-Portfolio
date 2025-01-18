@@ -84,7 +84,81 @@
                 <li>Contact</li>
             </ul>
         </nav>
+        <!-- About -->
+        <main class="about">
+            <h1>About Me</h1>
+            <div class="intro">
+                <p>Hi, I'm Syed Hamza Imran, an 11th-grade student with a passion for coding and creative web design. Alongside my school studies, I’m pursuing an Advanced Diploma in Software Engineering at Aptech Learning to enhance my technical expertise.</p>
+                <br>
+                <p>While I specialize in designing creative and user-friendly websites, I’m also delving into backend development by learning PHP, Laravel, and MySQL. My goal is to create dynamic and functional applications that provide seamless user experiences. I enjoy solving problems, experimenting with new technologies, and bringing innovative ideas to life through my projects. Whether it’s building visually appealing designs or developing robust backend systems, I’m dedicated to crafting solutions that combine functionality and creativity.</p>
+            </div>
+            <div class="services">
+                <h2>My Services</h2>
+                <div class="service-cards">
+                    <script>
+                        sCards = [
+                            {
+                                icon : "web-dev.png",
+                                name : "Web Development",
+                                about : "I develop creative, user-friendly websites tailored to your unique needs.",
+                            },
+                            {
+                                icon : "web-design.png",
+                                name : "Web Design",
+                                about : "I design innovative, user-centric websites customized to suit your needs.",
+                            },
+                            {
+                                icon : "seo.png",
+                                name : "SEO",
+                                about : "I offer SEO services to improve your website's visibility and ranking.",
+                            },
+                            {
+                                icon : "maintainance.png",
+                                name : "Website Maintainance",
+                                about : "I offer web maintenance services, including bug fixing, to keep your site running smoothly.",
+                            },
+                            {
+                                icon : "portfolio.png",
+                                name : "Portfolio Website",
+                                about : "I create stunning portfolio websites that showcase your work and talents effectively.",
+                            },
+                            {
+                                icon : "quiz.png",
+                                name : "Quiz Website",
+                                about : "I design interactive quiz websites that engage users and make learning fun.",
+                            },
+                            {
+                                icon : "ecommerce.png",
+                                name : "Ecommerce Website",
+                                about : "I build user-friendly eCommerce websites that provide a seamless shopping experience.",
+                            },
+                        ]
+                        sCards.forEach(sCards => {
+                            document.write(
+                                `
+                                <div class="s-card">
+                                    <img src="Assets/images/${sCards.icon}" alt="">
+                                    <div class="s-card-content">
+                                        <h5>${sCards.name}</h5>
+                                        <p>${sCards.about}</p>
+                                    </div>
+                                </div>
+                                `
+                            )
+                        });
+                    </script>
+                </div>
+            </div>
+        </main>
+        <!-- Resume -->
+        <main class="resume">
+            <h1>Resume</h1>
+        </main>
     </section>
+
+
+
+
     <nav class="bottom-nav">
         <ul>
             <li>About</li>

@@ -4,19 +4,20 @@ const allDetails = document.getElementById("allDetails");
 
 function toggleContactInfo() {
     if (window.innerWidth <= 800) {
-        if (contactInfo.style.maxHeight === "0px" || contactInfo.style.maxHeight === "") {
+        if (contactInfo.style.maxHeight === "0px") {
             contactInfo.style.maxHeight = "500px";
             contactInfo.style.opacity = "1";
-            showContacts.textContent = "Hide Contacts";
+            showContacts.textContent = "^";
             allDetails.style.top = "650px";
         } else {
             contactInfo.style.maxHeight = "0px";
             contactInfo.style.opacity = "0";
-            showContacts.textContent = "Show Contacts";
+            showContacts.textContent = ">";
+            showContacts.style.transform = "rotate(deg)";
             allDetails.style.top = "210px";
         }
     } else if (window.innerWidth <= 1000) {
-        if (contactInfo.style.maxHeight === "0px" || contactInfo.style.maxHeight === "") {
+        if (contactInfo.style.maxHeight === "0px") {
             contactInfo.style.maxHeight = "500px";
             contactInfo.style.opacity = "1";
             showContacts.textContent = "Hide Contacts";
