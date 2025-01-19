@@ -688,10 +688,6 @@ label {
     width: 100%;
 }
 
-.contact-form input:focus {
-    /* outline: 1px solid #ffffff45; */
-}
-
 .contact-form input::placeholder {
     color: #979799;
     font-weight: 400;
