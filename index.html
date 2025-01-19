@@ -27,7 +27,7 @@
                 <p>Syed Hamza</p>
                 <button>Front-End Developer</button>
             </div>
-            <div class="show-contacts" id="showContacts" onclick="toggleContactInfo()">Show Contacts</div> 
+            <div class="show-contacts" id="showContacts" onclick="toggleContactInfo()">Show Contacts</div>
         </div>
         <div class="contact-info" id="contactInfo">
             <hr>
@@ -88,9 +88,16 @@
         <main class="about">
             <h1>About Me</h1>
             <div class="intro">
-                <p>Hi, I'm Syed Hamza Imran, an 11th-grade student with a passion for coding and creative web design. Alongside my school studies, I’m pursuing an Advanced Diploma in Software Engineering at Aptech Learning to enhance my technical expertise.</p>
+                <p>Hi, I'm Syed Hamza Imran, an 11th-grade student with a passion for coding and creative web design.
+                    Alongside my school studies, I’m pursuing an Advanced Diploma in Software Engineering at Aptech
+                    Learning to enhance my technical expertise.</p>
                 <br>
-                <p>While I specialize in designing creative and user-friendly websites, I’m also delving into backend development by learning PHP, Laravel, and MySQL. My goal is to create dynamic and functional applications that provide seamless user experiences. I enjoy solving problems, experimenting with new technologies, and bringing innovative ideas to life through my projects. Whether it’s building visually appealing designs or developing robust backend systems, I’m dedicated to crafting solutions that combine functionality and creativity.</p>
+                <p>While I specialize in designing creative and user-friendly websites, I’m also delving into backend
+                    development by learning PHP, Laravel, and MySQL. My goal is to create dynamic and functional
+                    applications that provide seamless user experiences. I enjoy solving problems, experimenting with
+                    new technologies, and bringing innovative ideas to life through my projects. Whether it’s building
+                    visually appealing designs or developing robust backend systems, I’m dedicated to crafting solutions
+                    that combine functionality and creativity.</p>
             </div>
             <div class="services">
                 <h2>My Services</h2>
@@ -98,39 +105,39 @@
                     <script>
                         sCards = [
                             {
-                                icon : "web-dev.png",
-                                name : "Web Development",
-                                about : "I develop creative, user-friendly websites tailored to your unique needs.",
+                                icon: "web-dev.png",
+                                name: "Web Development",
+                                about: "I develop creative, user-friendly websites tailored to your unique needs.",
                             },
                             {
-                                icon : "web-design.png",
-                                name : "Web Design",
-                                about : "I design innovative, user-centric websites customized to suit your needs.",
+                                icon: "web-design.png",
+                                name: "Web Design",
+                                about: "I design innovative, user-centric websites customized to suit your needs.",
                             },
                             {
-                                icon : "seo.png",
-                                name : "SEO",
-                                about : "I offer SEO services to improve your website's visibility and ranking.",
+                                icon: "seo.png",
+                                name: "SEO",
+                                about: "I offer SEO services to improve your website's visibility and ranking.",
                             },
                             {
-                                icon : "maintainance.png",
-                                name : "Website Maintainance",
-                                about : "I offer web maintenance services, including bug fixing, to keep your site running smoothly.",
+                                icon: "maintainance.png",
+                                name: "Website Maintenance",
+                                about: "I offer web maintenance services, including bug fixing, to keep your site running smoothly.",
                             },
                             {
-                                icon : "portfolio.png",
-                                name : "Portfolio Website",
-                                about : "I create stunning portfolio websites that showcase your work and talents effectively.",
+                                icon: "portfolio.png",
+                                name: "Portfolio Website",
+                                about: "I create stunning portfolio websites that showcase your work and talents effectively.",
                             },
                             {
-                                icon : "quiz.png",
-                                name : "Quiz Website",
-                                about : "I design interactive quiz websites that engage users and make learning fun.",
+                                icon: "quiz.png",
+                                name: "Quiz Website",
+                                about: "I design interactive quiz websites that engage users and make learning fun.",
                             },
                             {
-                                icon : "ecommerce.png",
-                                name : "Ecommerce Website",
-                                about : "I build user-friendly eCommerce websites that provide a seamless shopping experience.",
+                                icon: "ecommerce.png",
+                                name: "Ecommerce Website",
+                                about: "I build user-friendly eCommerce websites that provide a seamless shopping experience.",
                             },
                         ]
                         sCards.forEach(sCards => {
@@ -153,12 +160,234 @@
         <!-- Resume -->
         <main class="resume">
             <h1>Resume</h1>
+            <div class="education branch">
+                <div class="education-heading branch-heading">
+                    <p><i class="bi bi-mortarboard"></i></p>
+                    <h2>Education</h2>
+                </div>
+                <ul>
+                    <li>
+                        <p>Kuwait Indian School</p>
+                        <b>2015 - 2024</b>
+                    </li>
+                    <li>
+                        <p>NCR-CET College (High School)</p>
+                        <b>2024 - Present</b>
+                    </li>
+                    <li>
+                        <p>Aptech Learning Center</p>
+                        <b>2024 - Present</b>
+                    </li>
+                </ul>
+            </div>
+            <div class="experience branch">
+                <div class="experience-heading branch-heading">
+                    <p><i class="bi bi-book"></i></p>
+                    <h2>Experience</h2>
+                </div>
+                <ul>
+                    <li>
+                        <p>Internee</p>
+                        <b>2024 - Present</b>
+                        <br>
+                        <b>Mini Solutions</b>
+                    </li>
+                </ul>
+            </div>
+            <div class="skills">
+                <h2>My Skills</h2>
+                <div class="skills-card">
+                    <div class="skill">
+                        <div class="skill-name">
+                            <p>HTML</p>
+                            <b>90%</b>
+                        </div>
+                        <div class="range"></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">
+                            <p>CSS</p>
+                            <b>90%</b>
+                        </div>
+                        <div class="range"></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">
+                            <p>JavaScript</p>
+                            <b>90%</b>
+                        </div>
+                        <div class="range"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Projects -->
+        <main class="projects">
+            <h1>Projects</h1>
+            <ul class="projects-nav">
+                <li class="active">All</li>
+                <li>Mini Projects</li>
+                <li>Real Time Projects</li>
+                <li>Web Templates</li>
+                <li>Portfolio Websites</li>
+            </ul>
+            <select class="select-category" name="select-category" id="selectCategory">
+                <option value="All">All</option>
+                <option value="Mini Projects">Mini Projects</option>
+                <option value="Real Time Projects">Real Time Projects</option>
+                <option value="Web Templates">Web Templates</option>
+                <option value="Portfolio Websites">Portfolio Websites</option>
+            </select>
+            <div class="projects-section">
+                <script>
+                    pCard = [
+                        {
+                            link: "https://syedhamza6448.github.io/Music-Player/",
+                            title: "Mustafa Schooling System",
+                            category: "Real Time Projects",
+                            img: "mss-ss.png",
+                        },
+                        {
+                            link: "https://syedhamza6448.github.io/Music-Player/",
+                            title: "V-Card Portfolio",
+                            category: "Portfolio Websites",
+                            img: "vcard-ss.png",
+                        },
+                        {
+                            link: "https://syedhamza6448.github.io/Portfolio/",
+                            title: "Classic Portfolio",
+                            category: "Portfolio Websites",
+                            img: "portfolio-ss.png",
+                        },
+                        {
+                            link: "https://syedhamza6448.github.io/One-Piece-Quiz/",
+                            title: "One Piece Quiz",
+                            category: "Mini Projects",
+                            img: "op-quiz-ss.png",
+                        },
+                        {
+                            link: "http://mustafaschooling.com/",
+                            title: "AskMe Mobile Ltd.",
+                            category: "Web Templates",
+                            img: "AskMe-ss.png",
+                        },
+                        {
+                            link: "https://syedhamza6448.github.io/Music-Player/",
+                            title: "Music Player",
+                            category: "Mini Projects",
+                            img: "musicPlayer-ss.png",
+                        },
+                        {
+                            link: "https://syedhamza6448.github.io/Zoro-Gallery/",
+                            title: "Zoro's Gallery",
+                            category: "Mini Projects",
+                            img: "zoro-gallery-ss.png",
+                        },
+                        {
+                            link: "https://syedhamza6448.github.io/Age-Calculator/",
+                            title: "Age Calculator",
+                            category: "Mini Projects",
+                            img: "age-calculator-ss.png",
+                        },
+                        {
+                            link: "https://syedhamza6448.github.io/To-Do-List/",
+                            title: "To-Do List",
+                            category: "Mini Projects",
+                            img: "ToDoList-ss.png",
+                        },
+                        {
+                            link: "https://syedhamza6448.github.io/Notes-App/",
+                            title: "Notes App",
+                            category: "Mini Projects",
+                            img: "notes-ss.png",
+                        },
+                        {
+                            link: "https://syedhamza6448.github.io/Random-Password-Generator/",
+                            title: "Random Password Generator",
+                            category: "Mini Projects",
+                            img: "rpg-ss.png",
+                        },
+                        {
+                            link: "https://syedhamza6448.github.io/QR-Code-Generator/",
+                            title: "QR Code Generator",
+                            category: "Mini Projects",
+                            img: "qr-ss.png",
+                        },
+                        {
+                            link: "https://syedhamza6448.github.io/Image-Background/",
+                            title: "Background Change Effect",
+                            category: "Mini Projects",
+                            img: "ibce-ss.png",
+                        },
+                        {
+                            link: "https://syedhamza6448.github.io/Weather-App/",
+                            title: "Weather App",
+                            category: "Mini Projects",
+                            img: "WeatherApp-ss.png",
+                        },
+                        {
+                            link: "https://codepen.io/syedHamza6448/full/BaEMPez",
+                            title: "Rock Paper Scissors",
+                            category: "Mini Projects",
+                            img: "rps-ss.png",
+                        },
+                        {
+                            link: "https://codepen.io/syedHamza6448/full/bGJzEKv",
+                            title: "Tic Tac Toe",
+                            category: "Mini Projects",
+                            img: "ttt-ss.png",
+                        },
+                    ]
+                    pCard.forEach(pCard => {
+                        document.write(
+                            `
+                            <a href="${pCard.link}" target="_blank">
+                                <div class="project-card">
+                                    <img src="Assets/images/${pCard.img}" alt="">
+                                    <div class="view-icon">
+                                        <i class="bi bi-eye"></i>
+                                    </div>
+                                    <p>${pCard.title}</p>
+                                    <b>${pCard.category}</b>
+                                </div>
+                            </a>
+                            `
+                        )
+                    })
+                </script>
+            </div>
+        </main>
+        <!-- Contact -->
+        <main class="contact">
+            <h1>Contact</h1>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462118.02491053584!2d67.15546194999999!3d25.193202399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e06651d4bbf%3A0x9cf92f44555a0c23!2sKarachi%2C%20Karachi%20City%2C%20Sindh!5e0!3m2!1sen!2s!4v1737309364198!5m2!1sen!2s"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="contact-form">
+                <h2>Contact Form</h2>
+                <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                    <input type="hidden" name="access_key" value="1cd084eb-5af8-43bc-9c37-8029fcf36b52">
+                
+                    <label for="name">
+                        <input type="text" name="name" id="name" placeholder="Full Name" required>
+                    </label>
+                    <label for="email">
+                        <input type="email" name="email" id="email" placeholder="Email Address" required>
+                    </label>
+                    <label style="width: 100%;" for="message">
+                        <textarea name="message" id="message" placeholder="Message" required></textarea>
+                    </label>
+                    <button type="submit" id="submitButton">
+                        <i class="bi bi-send"></i> Send Message
+                    </button>
+                </form>
+            </div>
         </main>
     </section>
 
 
-
-
+    <!-- Navbar For Small Screens -->
     <nav class="bottom-nav">
         <ul>
             <li>About</li>
