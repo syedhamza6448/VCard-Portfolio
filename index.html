@@ -22,8 +22,17 @@
     <section class="info">
         <div class="profile">
             <figure>
-                <div class="profile-img"></div>
-            </figure>
+                <div class="profile-img">
+                    <img src="Assets/images/me.png" alt="Me" />
+                  </div>
+                  <div class="profile-img hidden">
+                    <img src="Assets/images/me-avatar.jpg" alt="My-Avatar" />
+                  </div>
+                  <div class="slider-controls">
+                    <div class="circle active"></div>
+                    <div class="circle"></div>
+                  </div>                  
+                </figure>
             <div class="name">
                 <p>Syed Hamza</p>
                 <button>Front-End Developer</button>
@@ -31,7 +40,7 @@
             <div class="show-contacts" id="showContacts" onclick="toggleContactInfo()">Show Contacts</div>
         </div>
         <div class="contact-info" id="contactInfo">
-            <hr>
+            <hr style="margin-top: 30px;">
             <div class="contact-info-row">
                 <div class="contact-icons">
                     <i class="bi bi-envelope"></i>

@@ -88,12 +88,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function filterProjects(category) {
     const projectLinks = document.querySelectorAll('.projects-section a');
-    
+
     projectLinks.forEach(link => {
         const projectCategory = link.querySelector('b').textContent.trim();
 
         if (category === 'All' || projectCategory === category) {
-            link.style.display = 'block'; 
+            link.style.display = 'block';
         } else {
             link.style.display = 'none';
         }
@@ -102,7 +102,7 @@ function filterProjects(category) {
 
 function handleNavFilter() {
     const navItems = document.querySelectorAll('.projects-nav li');
-    
+
     navItems.forEach(item => {
         item.addEventListener('click', () => {
             const category = item.textContent.trim();
@@ -117,7 +117,7 @@ function handleNavFilter() {
 
 function handleDropdownFilter() {
     const selectCategory = document.getElementById('selectCategory');
-    
+
     selectCategory.addEventListener('change', () => {
         const category = selectCategory.value;
 
@@ -159,10 +159,10 @@ function checkFormValidity() {
     const allValid = Array.from(inputs).every(input => validateInput(input));
     if (allValid) {
         submitButton.classList.add('enabled');
-        submitButton.style.pointerEvents = 'auto'; 
+        submitButton.style.pointerEvents = 'auto';
     } else {
         submitButton.classList.remove('enabled');
-        submitButton.style.pointerEvents = 'none'; 
+        submitButton.style.pointerEvents = 'none';
     }
 }
 
@@ -178,6 +178,52 @@ inputs.forEach(input => {
 
 form.addEventListener('submit', event => {
     if (!Array.from(inputs).every(input => validateInput(input))) {
-        event.preventDefault(); 
+        event.preventDefault();
+    }
+});
+
+
+
+let currentIndex = 0;
+const images = document.querySelectorAll('.profile .profile-img');
+const circles = document.querySelectorAll('.slider-controls .circle');
+const autoChangeInterval = 10000;
+
+function updateSlider(index) {
+    images.forEach((img, i) => {
+        img.classList.toggle('hidden', i !== index);
+    });
+    circles.forEach((circle, i) => {
+        circle.classList.toggle('active', i === index);
+    });
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateSlider(currentIndex);
+}
+
+circles.forEach((circle, index) => {
+    circle.addEventListener('click', () => {
+        currentIndex = index;
+        updateSlider(currentIndex);
+    });
+});
+
+let autoChange = setInterval(nextSlide, autoChangeInterval);
+
+let startX = 0;
+
+document.querySelector('figure').addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+});
+
+document.querySelector('figure').addEventListener('touchend', (e) => {
+    const endX = e.changedTouches[0].clientX;
+    if (endX < startX - 50) {
+        nextSlide();
+    } else if (endX > startX + 50) {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateSlider(currentIndex);
     }
 });
