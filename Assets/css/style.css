@@ -306,7 +306,7 @@ hr {
 
 .bottom-nav ul li {
     list-style: none;
-    font-size: .65em;
+    font-size: 10em;
 }
 
 main h1 {
@@ -974,7 +974,7 @@ textarea.valid {
     }
 
     .bottom-nav ul li {
-        font-size: .65em;
+        font-size: .5em;
     }
 
     .contact-info {
