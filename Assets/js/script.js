@@ -185,12 +185,12 @@ form.addEventListener('submit', event => {
 
 
 let currentIndex = 0;
-const images = document.querySelectorAll('.profile .profile-img');
+const image = document.querySelectorAll('.profile .profile-img');
 const circles = document.querySelectorAll('.slider-controls .circle');
 const autoChangeInterval = 10000;
 
 function updateSlider(index) {
-    images.forEach((img, i) => {
+    image.forEach((img, i) => {
         img.classList.toggle('hidden', i !== index);
     });
     circles.forEach((circle, i) => {
@@ -227,3 +227,102 @@ document.querySelector('figure').addEventListener('touchend', (e) => {
         updateSlider(currentIndex);
     }
 });
+
+
+const galleryContainer = document.querySelector(".gallery-container")
+const fullscreenPreview = document.getElementById("fullscreen-preview")
+const previewImage = document.getElementById("preview-image")
+const closePreview = document.getElementById("close-preview")
+const prevImage = document.getElementById("prev-image")
+const nextImage = document.getElementById("next-image")
+
+// Sample photo URLs (replace with your own photos)
+const photos = [
+    "Assets/images/me.png",
+    "Assets/images/me-2.png",
+    "Assets/images/me-3.png",
+    "Assets/images/me-4.png",
+    "Assets/images/me-5.png",
+    "Assets/images/me-6.png",
+    "Assets/images/me-7.png",
+    "Assets/images/me-8.png",
+    "Assets/images/me-9.png",
+    "Assets/images/me-10.png",
+    "Assets/images/me-11.png",
+]
+
+let currentImageIndex = 0
+
+// Function to create gallery items
+function createGalleryItem(photoUrl, index) {
+    const item = document.createElement("div")
+    item.className = "gallery-item"
+
+    const img = document.createElement("img")
+    img.src = photoUrl
+    img.alt = "Gallery image"
+    img.loading = "lazy" // Enable lazy loading for better performance
+
+    // Add click event listener to show full-screen preview
+    img.addEventListener("click", () => {
+        showFullscreenPreview(index)
+    })
+
+    item.appendChild(img)
+    return item
+}
+
+// Function to show full-screen preview
+function showFullscreenPreview(index) {
+    currentImageIndex = index
+    previewImage.src = photos[index]
+    fullscreenPreview.style.display = "flex"
+}
+
+// Function to close full-screen preview
+function closeFullscreenPreview() {
+    fullscreenPreview.style.display = "none"
+}
+
+// Function to show next image
+function showNextImage() {
+    currentImageIndex = (currentImageIndex + 1) % photos.length
+    previewImage.src = photos[currentImageIndex]
+}
+
+// Function to show previous image
+function showPreviousImage() {
+    currentImageIndex = (currentImageIndex - 1 + photos.length) % photos.length
+    previewImage.src = photos[currentImageIndex]
+}
+
+// Populate the gallery
+photos.forEach((photoUrl, index) => {
+    const item = createGalleryItem(photoUrl, index)
+    galleryContainer.appendChild(item)
+})
+
+// Event listeners for full-screen preview controls
+closePreview.addEventListener("click", closeFullscreenPreview)
+nextImage.addEventListener("click", showNextImage)
+prevImage.addEventListener("click", showPreviousImage)
+
+// Close preview when clicking outside the image
+fullscreenPreview.addEventListener("click", (e) => {
+    if (e.target === fullscreenPreview) {
+        closeFullscreenPreview()
+    }
+})
+
+// Keyboard navigation
+document.addEventListener("keydown", (e) => {
+    if (fullscreenPreview.style.display === "flex") {
+        if (e.key === "ArrowRight") {
+            showNextImage()
+        } else if (e.key === "ArrowLeft") {
+            showPreviousImage()
+        } else if (e.key === "Escape") {
+            closeFullscreenPreview()
+        }
+    }
+})

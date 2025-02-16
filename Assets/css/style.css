@@ -14,6 +14,7 @@ body {
     justify-content: center;
     overflow-y: scroll;
 }
+
 *::selection {
     background-color: #f2d16d;
     color: #121212;
@@ -264,7 +265,7 @@ hr {
     cursor: pointer;
     color: #D6D6D6;
     transition: all 0.3s ease-in-out;
-    font-size: 1em;
+    font-size: .75em;
     font-weight: 500;
 }
 
@@ -305,7 +306,7 @@ hr {
 
 .bottom-nav ul li {
     list-style: none;
-    font-size: .75em;
+    font-size: .65em;
 }
 
 main h1 {
@@ -805,6 +806,74 @@ textarea.valid {
     outline: 2px solid #f2d16d;
 }
 
+.gallery {
+    max-width: 1200px;
+}
+
+.gallery-container {
+    column-count: 3;
+    column-gap: 20px;
+}
+
+.gallery-item {
+    break-inside: avoid;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+.fullscreen-preview {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen-preview img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+.fullscreen-preview button {
+    color: #f2d16d;
+}
+
+.preview-button {
+    position: absolute;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#close-preview {
+    top: 20px;
+    right: 20px;
+
+}
+
+#prev-image {
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#next-image {
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 @media (max-width: 1000px) {
     .info {
         position: absolute;
@@ -815,17 +884,21 @@ textarea.valid {
     .profile {
         flex-direction: row;
     }
+
     .profile figure {
         width: 200px;
     }
+
     .profile-img {
         width: 200px;
         height: 100%;
     }
+
     .profile-img {
         height: 100%;
         width: 100%;
     }
+
     .info .name {
         align-items: start;
     }
@@ -885,6 +958,10 @@ textarea.valid {
     label {
         width: 100%;
     }
+
+    .gallery-container {
+        column-count: 3;
+    }
 }
 
 @media (max-width: 800px) {
@@ -894,6 +971,10 @@ textarea.valid {
 
     .bottom-nav {
         display: block;
+    }
+
+    .bottom-nav ul li {
+        font-size: .65em;
     }
 
     .contact-info {
@@ -910,17 +991,21 @@ textarea.valid {
         width: 100px;
         margin-right: 50px;
     }
+
     .profile-img {
         height: 100px;
         width: 100px;
     }
+
     .profile-img img {
         height: 100px;
         width: 100px;
     }
+
     .slider-controls {
         display: none;
     }
+
     .info .name p {
         width: 100%;
         font-size: 1em;
@@ -997,6 +1082,10 @@ textarea.valid {
 
     .contact iframe {
         height: 200px;
+    }
+
+    .gallery-container {
+        column-count: 2;
     }
 }
 
